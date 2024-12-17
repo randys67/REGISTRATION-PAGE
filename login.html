@@ -133,13 +133,14 @@
         </form>
 
         <div class="links">
-            <a href="https://yourwebsite.com/forgot-password" target="_top">Forgot password?</a>
+            <a href="jobs.html" target="_top">Forgot password?</a>
         </div>
         <div class="links">
             Don't have an account? <a href="https://yourwebsite.com/signup" target="_top">Click here to sign up.</a>
         </div>
     </div>
 
+    <!-- Enable Login Button Only When Form is Valid -->
     <script>
         // Predefined List of Authorized Emails
         const authorizedEmails = [
@@ -168,17 +169,6 @@
 
         emailInput.addEventListener('input', validateForm);
         passwordInput.addEventListener('input', validateForm);
-
-        // Redirect to dashboard after login
-        loginButton.addEventListener('click', function () {
-            const email = emailInput.value.trim();
-            if (authorizedEmails.includes(email)) {
-                // Automatic login and redirect to dashboard
-                window.location.href = 'jobs_dashboard.html';
-            } else {
-                emailError.style.display = 'block';
-            }
-        });
     </script>
 </body>
 
